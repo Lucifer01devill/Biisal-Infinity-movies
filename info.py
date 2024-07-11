@@ -15,7 +15,7 @@ def is_enabled(value, default):
 #main variables
 API_ID = int(environ.get('API_ID', ''))
 API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6165486744:AAFW3C6588558QbLWfRD_-ddGAWAfY')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5397984467').split()]
 USERNAME = environ.get('USERNAME', "https://telegram.me/biisal")
@@ -45,17 +45,17 @@ TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "14400"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "14400"))
 
 
-SHORTENER_API = environ.get("SHORTENER_API", "5bb6e402dd86fb8774690a5f4a65d2a2c0c04877")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'shortslink.in')
-SHORTENER_API2 = environ.get("SHORTENER_API2", "41a89e7a1f16e7dbec0ee52d743f3b5a38a09613")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'shortslink2.com')
-SHORTENER_API3 = environ.get("SHORTENER_API3", "f287e7e9b1a23c34f542f77787d39607cae36a4d")
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'shortslink3.online')
+SHORTENER_API = environ.get("SHORTENER_API", "b2da06188bd355e103d16ab1b56db314709740df")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'tnshort.net')
+SHORTENER_API2 = environ.get("SHORTENER_API2", "b2da06188bd355e103d16ab1b56db314709740df")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'tnshort.net')
+SHORTENER_API3 = environ.get("SHORTENER_API3", "b2da06188bd355e103d16ab1b56db314709740df")
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'tnshort.net')
 TUTORIAL = environ.get("TUTORIAL", "")
 TUTORIAL2 = environ.get("TUTORIAL2", "")
 TUTORIAL3 = environ.get("TUTORIAL3", "")
 
-LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam", "bengali", "marathi", "gujarati", "punjabi"]
+LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam", "bengali", "marathi", "gujarati", "punjabi", "dual", "multi"]
 QUALITIES = ["HdRip","web-dl" ,"bluray", "hdr", "fhd" , "240p", "360p", "480p", "540p", "720p", "960p", "1080p", "1440p", "2K", "2160p", "4k", "5K", "8K"]
 YEARS = [f'{i}' for i in range(2024 , 2002,-1 )]
 SEASONS = [f'season {i}'for i in range (1 , 23)]
