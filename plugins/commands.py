@@ -237,7 +237,7 @@ async def start(client:Client, message):
             InlineKeyboardButton('🧧 ᴘʀᴇᴍɪᴜᴍ', callback_data='premium')
         ],
         [
-            InlineKeyboardButton(''💲ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🪙', callback_data='earn')
+            InlineKeyboardButton('💲ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🪙', callback_data='earn')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         return await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
