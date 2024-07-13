@@ -18,7 +18,7 @@ API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5207138613 6570247060 5533079371').split()]
-USERNAME = environ.get('USERNAME', "https://telegram.me/infinity_botzz")
+USERNAME = environ.get('USERNAME', "https://telegram.me/talk_mrs_bot")
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/infinitymoviefiles')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002043045800 -1001866646571').split()]
 
@@ -30,10 +30,10 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002051594756'))
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002215382811'))
-QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/ccb9db43e62a2e524928e.jpg')
-START_IMG = environ.get('START_IMG', 'https://graph.org/file/4dad0cc16f190468454ee.jpg')
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL','-1002031180571'))
-DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','-1001905670346'))
+QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/f21404a4882698d5488dd.jpg')
+START_IMG = environ.get('START_IMG', 'https://graph.org//file/505188b160b4d79a32269.jpg')
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL','-1001964309084'))
+DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','-1001858701768'))
 URL = environ.get('URL', 'mytestbot-jvdfhbj.com')
 STICKERS_IDS = ('CAACAgQAAxkBAAEK99dlfC7LDqnuwtGRkIoacot_dGC4zQACbg8AAuHqsVDaMQeY6CcRojME').split()
 FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '600'))
