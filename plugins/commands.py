@@ -883,7 +883,7 @@ async def save_tutorial_2(client, message):
     try:
         tutorial = message.text.split(" ", 1)[1]
     except:
-        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_caption https://t.me/infinity_botzz</code>")    
+        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial_2 https://t.me/infinity_botzz</code>")    
     await save_group_settings(grp_id, 'tutorial_two', tutorial2)
     await message.reply_text(f"<b>Successfully changed tutorial for {title} to</b>\n\n{tutorial2}", disable_web_page_preview=True)
 
@@ -900,6 +900,6 @@ async def save_tutorial_3(client, message):
     try:
         tutorial = message.text.split(" ", 1)[1]
     except:
-        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_caption https://t.me/infinity_botzz</code>")    
+        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial_3 https://t.me/infinity_botzz</code>")    
     await save_group_settings(grp_id, 'tutorial3', tutorial3)
     await message.reply_text(f"<b>Successfully changed tutorial for {title} to</b>\n\n{tutorial3}", disable_web_page_preview=True)
