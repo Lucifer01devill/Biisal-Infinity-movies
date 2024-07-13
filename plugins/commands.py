@@ -871,8 +871,8 @@ async def set_time_3(client, message):
     await message.reply_text(f"Successfully set 1st verify time for {title}\n\nTime is - <code>{time}</code>")
 
 
-@Client.on_message(filters.command('set_tutorial2'))
-async def save_tutorial(client, message):
+@Client.on_message(filters.command('set_tutorial_2'))
+async def save_tutorial_2(client, message):
     grp_id = message.chat.id
     title = message.chat.title
     chat_type = message.chat.type
@@ -888,8 +888,8 @@ async def save_tutorial(client, message):
     await message.reply_text(f"<b>Successfully changed tutorial for {title} to</b>\n\n{tutorial2}", disable_web_page_preview=True)
 
 
-@Client.on_message(filters.command('set_tutorial3'))
-async def save_tutorial(client, message):
+@Client.on_message(filters.command('set_tutorial_3'))
+async def save_tutorial_3(client, message):
     grp_id = message.chat.id
     title = message.chat.title
     chat_type = message.chat.type
