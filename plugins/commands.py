@@ -149,7 +149,7 @@ async def start(client:Client, message):
                             ],
                             [
                             InlineKeyboardButton('🎭 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
-                            InlineKeyboardButton('🧧 ᴘʀᴇᴍɪᴜᴍ', callback_data='premium', callback_data='about')
+                            InlineKeyboardButton('🧧 ᴘʀᴇᴍɪᴜᴍ', callback_data='premium')
                             ],
                             [
                             InlineKeyboardButton('💲ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🪙', callback_data='earn')
