@@ -1,3 +1,4 @@
+#im
 import asyncio
 import re
 import math
@@ -159,18 +160,14 @@ async def next_page(bot, query):
                 for file in files
               ]
     btn.insert(0,[
-        InlineKeyboardButton("⛔ ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ♻️", callback_data=f"languages#{key}#{offset}#{req}"),
+        InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
+        InlineKeyboardButton("♻️ʟᴀɴɢᴜᴀɢᴇ ♻️", callback_data=f"languages#{key}#{offset}#{req}"),
         ])
     btn.insert(1, [
         InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
         InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
+        InlineKeyboardButton("🈴 season 🈴", callback_data=f"seasons#{key}#{offset}#{req}")
     ])
-    btn.insert(2, [
-        InlineKeyboardButton("🈴 ᴄʜᴏᴏsᴇ season🍿", callback_data=f"seasons#{key}#{offset}#{req}")
-    ])
-    btn.insert(3,[
-        InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
-        ])
 
     if 0 < offset <= int(MAX_BTN):
         off_set = 0
@@ -291,15 +288,14 @@ async def season_search(client: Client, query: CallbackQuery):
               ]
    
     btn.insert(0,[
-        InlineKeyboardButton("⛔ ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ♻️", callback_data=f"languages#{key}#{offset}#{req}"),
+        InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
+        InlineKeyboardButton("♻️ʟᴀɴɢᴜᴀɢᴇ ♻️", callback_data=f"languages#{key}#{offset}#{req}"),
         ])
     btn.insert(1, [
         InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
         InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
     ])
-    btn.insert(2,[
-        InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
-        ])
+    
     
     if n_offset== '':
         btn.append(
@@ -394,7 +390,7 @@ async def year_search(client: Client, query: CallbackQuery):
         
    
     btn.insert(0,[
-        InlineKeyboardButton("🈴 ᴄʜᴏᴏsᴇ season🍿", callback_data=f"seasons#{key}#{offset}#{req}")
+        InlineKeyboardButton("🈴 season 🈴", callback_data=f"seasons#{key}#{offset}#{req}")
         ])
     btn.insert(1, [
         InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
@@ -496,15 +492,14 @@ async def quality_search(client: Client, query: CallbackQuery):
         
  
     btn.insert(0,[
-        InlineKeyboardButton("⛔ ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ♻️", callback_data=f"languages#{key}#{offset}#{req}"),
+        InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
+        InlineKeyboardButton("♻️ʟᴀɴɢᴜᴀɢᴇ ♻️", callback_data=f"languages#{key}#{offset}#{req}"),
         ])
     btn.insert(1, [
         InlineKeyboardButton("✨ season🍿", callback_data=f"seasons#{key}#{offset}#{req}"),
         InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
     ])
-    btn.insert(2, [
-        InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
-    ])
+    
     if n_offset== '':
         btn.append(
             [InlineKeyboardButton(text="🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", callback_data="buttons")]
@@ -1329,18 +1324,15 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
     if offset != "":
         if total_results >= MAX_BTN:
             btn.insert(0,[
-                InlineKeyboardButton("⛔ ᴄʜᴏᴏsᴇ ʟᴀɴɢᴜᴀɢᴇ ♻️", callback_data=f"languages#{key}#{offset}#{req}"),
+                InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
+                InlineKeyboardButton("♻️ʟᴀɴɢᴜᴀɢᴇ ♻️", callback_data=f"languages#{key}#{offset}#{req}"),
                 ])
             btn.insert(1, [
                 InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
                 InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
+                InlineKeyboardButton("🈴 season 🈴", callback_data=f"seasons#{key}#{offset}#{req}")
             ])
-            btn.insert(2, [
-                InlineKeyboardButton("🈴 ᴄʜᴏᴏsᴇ season🍿", callback_data=f"seasons#{key}#{offset}#{req}")
-            ])
-            btn.insert(3,[
-                InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
-                ])
+            
         else:
             btn.insert(0,[
                 InlineKeyboardButton("✨ ɢᴇᴛ ᴀʟʟ ғɪʟᴇs ✨", callback_data=batch_link),
