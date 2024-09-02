@@ -34,7 +34,7 @@ QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/f21404a4882698d5488dd.j
 START_IMG = environ.get('START_IMG', 'https://graph.org//file/505188b160b4d79a32269.jpg')
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL','-1001964309084'))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','-1001858701768'))
-URL = environ.get('URL', 'mytestbot-jvdfhbj.com')
+URL = environ.get('URL', 'happy-emilee-infinity-movies-hd-movies-hub01-7001d8e5.koyeb.app')
 STICKERS_IDS = ('CAACAgQAAxkBAAEK99dlfC7LDqnuwtGRkIoacot_dGC4zQACbg8AAuHqsVDaMQeY6CcRojME').split()
 FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '600'))
 
@@ -105,6 +105,6 @@ SETTINGS = {
             'third_verify_time': THREE_VERIFY_GAP
     }
 DEFAULT_POST_MODE = {
-    'singel_post_mode' : False,
+    'singel_post_mode' : True,
     'all_files_post_mode' : False
 }
