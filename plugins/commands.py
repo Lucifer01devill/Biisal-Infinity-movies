@@ -113,7 +113,13 @@ async def start(client:Client, message):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        return 
+        return
+    if len(message.command) == 2 and message.command[1].startswith('getfile'):
+        searches = message.command[1].split("-", 1)[1] 
+        search = searches.replace('-',' ')
+        message.text = search 
+        await auto_filter(client, message) 
+        return
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         status = get_status()
         aks=await message.reply_text(f"<b>🔥 ʏᴇs {status},\nʜᴏᴡ ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ??</b>")
@@ -141,8 +147,8 @@ async def start(client:Client, message):
                         buttons = [[
                             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
                             ],[
-                            InlineKeyboardButton('•ꜰᴇᴀᴛᴜʀᴇs•', callback_data='features'),
-                            InlineKeyboardButton('•ᴀʙᴏᴜᴛ•', callback_data=f'about'),
+                            InlineKeyboardButton('• ꜰᴇᴀᴛᴜʀᴇs •', callback_data='features'),
+                            InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data=f'about'),
                             ],
                             [
                             InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
@@ -171,8 +177,8 @@ async def start(client:Client, message):
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('•ꜰᴇᴀᴛᴜʀᴇs•', callback_data='features'),
-            InlineKeyboardButton('•ᴀʙᴏᴜᴛ•', callback_data=f'about'),
+            InlineKeyboardButton('• ꜰᴇᴀᴛᴜʀᴇs •', callback_data='features'),
+            InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data=f'about'),
         ],
         [
             InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
@@ -226,8 +232,8 @@ async def start(client:Client, message):
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('•ꜰᴇᴀᴛᴜʀᴇs•', callback_data='features'),
-            InlineKeyboardButton('•ᴀʙᴏᴜᴛ•', callback_data=f'about'),
+            InlineKeyboardButton('• ꜰᴇᴀᴛᴜʀᴇs •', callback_data='features'),
+            InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data=f'about'),
         ],
         [
             InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
