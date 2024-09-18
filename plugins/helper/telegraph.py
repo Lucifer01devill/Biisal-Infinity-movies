@@ -1,5 +1,4 @@
-import os
-import requests
+import os, asyncio, requests
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -47,10 +46,11 @@ async def upload_command(client, message):
         os.remove(infinity_path)
     except Exception as error:
         print(f"Error removing file: {error}")
-
-    await uploading_message.reply_photo(
+        
+    await uploading_message.delete()
+    await message.reply_photo(
         photo=f'{infinity_url}',
-        text=f"<b>Link :-</b>\n\n<code>{infinity_url}</code>",
+        caption=f"<b>ʏᴏᴜʀ ᴄʟᴏᴜᴅ ʟɪɴᴋ ᴄᴏᴍᴘʟᴇᴛᴇᴅ 👇</b>\n\n𝑳𝒊𝒏𝒌 :-\n\n<code>{infinity_url}</code> <𝚃𝙰𝙿 𝚃𝙾 𝙲𝙾𝙿𝚈>\n\n<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - @infinity_botzz</b>",
         #disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([[
             InlineKeyboardButton(text="• ᴏᴘᴇɴ ʟɪɴᴋ •", url=infinity_url),
