@@ -23,7 +23,7 @@ def upload_image_requests(image_path):
 async def upload_command(client, message):
     replied = message.reply_to_message
     if not replied:
-        await message.reply_text("Reply to a photo or video under 512 MB.")
+        await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇᴅɪᴀ (ᴘʜᴏᴛᴏ/ᴠɪᴅᴇᴏ) ᴜɴᴅᴇʀ 512ᴍʙ")
         return
 
     if replied.media and hasattr(replied, 'file_size'):
@@ -33,7 +33,7 @@ async def upload_command(client, message):
 
     infinity_path = await replied.download()
 
-    uploading_message = await message.reply_text("<code>Uploading...</code>")
+    uploading_message = await message.reply_text("<code>ᴜᴘʟᴏᴀᴅɪɴɢ...</code>")
 
     try:
         infinity_url = upload_image_requests(infinity_path)
@@ -48,13 +48,14 @@ async def upload_command(client, message):
     except Exception as error:
         print(f"Error removing file: {error}")
 
-    await uploading_message.edit_text(
+    await uploading_message.reply(
+        photo=f'{infinity_url}',
         text=f"<b>Link :-</b>\n\n<code>{infinity_url}</code>",
-        disable_web_page_preview=True,
+        #disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton(text="Open Link", url=infinity_url),
-            InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url={infinity_url}")
+            InlineKeyboardButton(text="• ᴏᴘᴇɴ ʟɪɴᴋ •", url=infinity_url),
+            InlineKeyboardButton(text="• sʜᴀʀᴇ ʟɪɴᴋ •", url=f"https://telegram.me/share/url?url={infinity_url}")
         ], [
-            InlineKeyboardButton(text="Close this menu", callback_data="close_data")
+            InlineKeyboardButton(text="🗑️ ᴄʟᴏsᴇ / ᴅᴇʟᴇᴛᴇ 🗑️", callback_data="close_data")
         ]])
     )
