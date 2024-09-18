@@ -307,7 +307,7 @@ async def start(client:Client, message):
             f_caption = CAPTION.format(
                 file_name=formate_file_name(file.file_name),
                 file_size=get_size(file.file_size),
-                file_caption=file.caption
+                #file_caption=file.caption
             )
             btn = [[
                 InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f'stream#{file.file_id}')
@@ -347,7 +347,7 @@ async def start(client:Client, message):
     f_caption = CAPTION.format(
         file_name = formate_file_name(files.file_name),
         file_size = get_size(files.file_size),
-        file_caption=files.caption
+        #file_caption=files.caption
     )
     btn = [[
         InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f'stream#{file_id}')
