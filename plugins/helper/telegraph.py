@@ -48,7 +48,7 @@ async def upload_command(client, message):
     except Exception as error:
         print(f"Error removing file: {error}")
 
-    await uploading_message.reply(
+    await uploading_message.reply_photo(
         photo=f'{infinity_url}',
         text=f"<b>Link :-</b>\n\n<code>{infinity_url}</code>",
         #disable_web_page_preview=True,
