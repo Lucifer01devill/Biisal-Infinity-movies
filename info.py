@@ -47,12 +47,12 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "28800"))
 
 SHORTENER_API = environ.get("SHORTENER_API", "b2da06188bd355e103d16ab1b56db314709740df")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'tnshort.net')
-SHORTENER_API2 = environ.get("SHORTENER_API2", "b2da06188bd355e103d16ab1b56db314709740df")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'tnshort.net')
-SHORTENER_API3 = environ.get("SHORTENER_API3", "b2da06188bd355e103d16ab1b56db314709740df")
+SHORTENER_API2 = environ.get("SHORTENER_API2", "db8fd704394b5ab367448d70ed16f40cb5074b5f")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'gyanilinks.com')
+SHORTENER_API3 = environ.get("SHORTENER_API3", "9bccb0b14ed6841652fa22d3481907788c1b8838")
 SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'tnshort.net')
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/links_tutorialbypp/25")
-TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/links_tutorialbypp/25")
+TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/links_tutorialbypp/27")
 TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/links_tutorialbypp/25")
 
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam", "bengali", "marathi", "gujarati", "punjabi", "dual", "multi"]
