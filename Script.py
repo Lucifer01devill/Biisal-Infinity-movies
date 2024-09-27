@@ -249,7 +249,5 @@ Title: {title}
 Rating: {rating}
 Genre: {genres}
 
-Description: {description}
-
-{file_name}
+File Name : {file_name}
 </b>"""
