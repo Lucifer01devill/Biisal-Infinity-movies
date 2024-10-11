@@ -1,4 +1,5 @@
 pyrofork==2.3.43
+https://codeload.github.com/KurimuzonAkuma/pyrogram/zip/refs/heads/dev
 tgcrypto
 pymongo[srv]
 motor
@@ -17,7 +18,7 @@ ujson
 pyshorteners
 datetime
 pytz
-dnspython==2.3.0
+dnspython
 python-math
 Pillow
 speedtest-cli
