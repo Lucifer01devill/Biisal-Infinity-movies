@@ -13,7 +13,6 @@ ffmpeg-python
 ffmpeg
 requests
 aiohttp
-telegraph
 ujson
 pyshorteners
 datetime
