@@ -149,7 +149,7 @@ async def next_page(bot, query):
     settings = await get_settings(query.message.chat.id)
     reqnxt  = query.from_user.id if query.from_user else 0
     temp.CHAT[query.from_user.id] = query.message.chat.id
-    del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b><blockquote>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</blockquote></b>" if settings["auto_delete"] else ''
     links = ""
     if settings["link"]:
         btn = []
@@ -165,8 +165,8 @@ async def next_page(bot, query):
         ])
     btn.insert(1, [
         InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
-        InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
-        InlineKeyboardButton("🈴 season 🈴", callback_data=f"seasons#{key}#{offset}#{req}")
+        InlineKeyboardButton("🚦ʏᴇᴀʀ🚦", callback_data=f"years#{key}#{offset}#{req}"),
+        InlineKeyboardButton("season 🫧", callback_data=f"seasons#{key}#{offset}#{req}")
     ])
 
     if 0 < offset <= int(MAX_BTN):
@@ -275,7 +275,7 @@ async def season_search(client: Client, query: CallbackQuery):
     reqnxt = query.from_user.id if query.from_user else 0
     settings = await get_settings(query.message.chat.id)
     temp.CHAT[query.from_user.id] = query.message.chat.id
-    del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b><blockquote>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</blockquote></b>" if settings["auto_delete"] else ''
     links = ""
     if settings["link"]:
         btn = []
@@ -293,7 +293,7 @@ async def season_search(client: Client, query: CallbackQuery):
         ])
     btn.insert(1, [
         InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
-        InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
+        InlineKeyboardButton("🚦ʏᴇᴀʀ🚦", callback_data=f"years#{key}#{offset}#{req}"),
     ])
     
     
@@ -376,7 +376,7 @@ async def year_search(client: Client, query: CallbackQuery):
     reqnxt = query.from_user.id if query.from_user else 0
     settings = await get_settings(query.message.chat.id)
     temp.CHAT[query.from_user.id] = query.message.chat.id
-    del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b><blockquote>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</blockquote></b>" if settings["auto_delete"] else ''
     links = ""
     if settings["link"]:
         btn = []
@@ -390,7 +390,7 @@ async def year_search(client: Client, query: CallbackQuery):
         
    
     btn.insert(0,[
-        InlineKeyboardButton("🈴 season 🈴", callback_data=f"seasons#{key}#{offset}#{req}")
+        InlineKeyboardButton("season 🫧", callback_data=f"seasons#{key}#{offset}#{req}")
         ])
     btn.insert(1, [
         InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
@@ -478,7 +478,7 @@ async def quality_search(client: Client, query: CallbackQuery):
     reqnxt = query.from_user.id if query.from_user else 0
     settings = await get_settings(query.message.chat.id)
     temp.CHAT[query.from_user.id] = query.message.chat.id
-    del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b><blockquote>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</blockquote></b>" if settings["auto_delete"] else ''
     links = ""
     if settings["link"]:
         btn = []
@@ -497,7 +497,7 @@ async def quality_search(client: Client, query: CallbackQuery):
         ])
     btn.insert(1, [
         InlineKeyboardButton("✨ season🍿", callback_data=f"seasons#{key}#{offset}#{req}"),
-        InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
+        InlineKeyboardButton("🚦ʏᴇᴀʀ🚦", callback_data=f"years#{key}#{offset}#{req}"),
     ])
     
     if n_offset== '':
@@ -583,7 +583,7 @@ async def lang_search(client: Client, query: CallbackQuery):
     settings = await get_settings(query.message.chat.id)
     group_id = query.message.chat.id
     temp.CHAT[query.from_user.id] = query.message.chat.id
-    del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b><blockquote>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</blockquote></b>" if settings["auto_delete"] else ''
     links = ""
     if settings["link"]:
         btn = []
@@ -600,7 +600,7 @@ async def lang_search(client: Client, query: CallbackQuery):
         InlineKeyboardButton("🎭 ᴄʜᴏᴏsᴇ ǫᴜᴀʟɪᴛʏ ✨", callback_data=f"qualities#{key}#{offset}#{req}"),
         ])
     btn.insert(1, [
-        InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
+        InlineKeyboardButton("🚦ʏᴇᴀʀ🚦", callback_data=f"years#{key}#{offset}#{req}"),
         InlineKeyboardButton("✨ season🍿", callback_data=f"seasons#{key}#{offset}#{req}")
     ])
     btn.insert(2, [
@@ -1311,7 +1311,7 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
     batch_link = f"batchfiles#{message.chat.id}#{message.id}#{message.from_user.id}"
     temp.CHAT[message.from_user.id] = message.chat.id
     settings = await get_settings(message.chat.id , pm_mode=pm_mode)
-    del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b><blockquote>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</blockquote></b>" if settings["auto_delete"] else ''
     links = ""
     if settings["link"]:
         btn = []
@@ -1329,8 +1329,8 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                 ])
             btn.insert(1, [
                 InlineKeyboardButton("✨ ǫᴜᴀʟɪᴛʏ", callback_data=f"qualities#{key}#{offset}#{req}"),
-                InlineKeyboardButton("ʏᴇᴀʀ ⌛", callback_data=f"years#{key}#{offset}#{req}"),
-                InlineKeyboardButton("🈴 season 🈴", callback_data=f"seasons#{key}#{offset}#{req}")
+                InlineKeyboardButton("🚦ʏᴇᴀʀ🚦", callback_data=f"years#{key}#{offset}#{req}"),
+                InlineKeyboardButton("season 🫧", callback_data=f"seasons#{key}#{offset}#{req}")
             ])
             
         else:
@@ -1406,7 +1406,7 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
         )
     else:
         cap = f"<b>📂 ʜᴇʀᴇ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ sᴇᴀʀᴄʜ {search}</b>"
-    del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b><blockquote>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</blockquote></b>" if settings["auto_delete"] else ''
     CAP[key] = cap
     if imdb and imdb.get('poster'):
         try:
