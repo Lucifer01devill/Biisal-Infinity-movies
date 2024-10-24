@@ -247,9 +247,8 @@ Yᴏᴜʀ <ul>ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ</ul> ᴡɪʟʟ ʙᴇ ᴀᴄᴛɪᴠ
 
     MOVIES_UPDATE_TXT = """<b><blockquote>#New_File_Added</blockquote>
 
-Title: {title}
+Title: <code>{title}</code>
 Rating: {rating}
 Genre: {genres}
-
-{file_name}
+File name : {file_name}
 </b>"""
