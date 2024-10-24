@@ -38,8 +38,8 @@ async def get_imdb(file_name , post_mode):
     if imdb:
         caption = script.MOVIES_UPDATE_TXT.format(
             title=imdb.get('title'),
-            #rating=imdb.get('rating'),
-            #genres=imdb.get('genres'),
+            rating=imdb.get('rating'),
+            genres=imdb.get('genres'),
             #description=imdb.get('plot'),
             file_name=file_name
         )
