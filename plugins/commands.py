@@ -20,7 +20,7 @@ import traceback
 logger = logging.getLogger(__name__)
 # CHECK COMPONENTS FOLDER FOR MORE COMMANDS
 #----------------------------------
-from .pm_filter import auto-filter
+from .pm_filter import auto_filter
 #---------------------------------
 @Client.on_message(filters.command("invite") & filters.private & filters.user(ADMINS))
 async def invite(client, message):
