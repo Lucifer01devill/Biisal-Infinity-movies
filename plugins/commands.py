@@ -19,6 +19,9 @@ from info import *
 import traceback
 logger = logging.getLogger(__name__)
 # CHECK COMPONENTS FOLDER FOR MORE COMMANDS
+#----------------------------------
+from .pm_filter import auto-filter
+#---------------------------------
 @Client.on_message(filters.command("invite") & filters.private & filters.user(ADMINS))
 async def invite(client, message):
     toGenInvLink = message.command[1]
@@ -120,6 +123,13 @@ async def start(client:Client, message):
         message.text = search 
         await auto_filter(client, message) 
         return
+    try:
+         data = message.command[1]
+         if data.startswith('getfile'):
+             pm_mode = True
+    except:
+        pass
+
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         status = get_status()
         aks=await message.reply_text(f"<b>🔥 ʏᴇs {status},\nʜᴏᴡ ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ??</b>")
