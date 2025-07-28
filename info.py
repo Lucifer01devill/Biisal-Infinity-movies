@@ -17,7 +17,7 @@ API_ID = int(environ.get('API_ID', ''))
 API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5207138613 6570247060 5533079371').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5207138613 6570247060').split()]
 USERNAME = environ.get('USERNAME', "https://telegram.me/talk_mrs_bot")
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/infinitymoviefiles')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002043045800 -1001866646571').split()]
@@ -28,11 +28,11 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002051594756'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002737617817'))
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002215382811'))
 QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/f21404a4882698d5488dd.jpg')
 START_IMG = environ.get('START_IMG', 'https://graph.org//file/505188b160b4d79a32269.jpg')
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL','-1001964309084'))
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL','-1002806173653'))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','-1001858701768'))
 URL = environ.get('URL', 'happy-emilee-infinity-movies-hd-movies-hub01-7001d8e5.koyeb.app')
 STICKERS_IDS = ('CAACAgQAAxkBAAEK99dlfC7LDqnuwtGRkIoacot_dGC4zQACbg8AAuHqsVDaMQeY6CcRojME').split()
@@ -45,15 +45,15 @@ TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "14400"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "28800"))
 
 
-SHORTENER_API = environ.get("SHORTENER_API", "b2da06188bd355e103d16ab1b56db314709740df")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'tnshort.net')
-SHORTENER_API2 = environ.get("SHORTENER_API2", "cc266075ad29dc23f74e600b618457a17c7fa05b")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'shortxlinks.com')
-SHORTENER_API3 = environ.get("SHORTENER_API3", "23713ba321c3ed8a7d3580276b0248a5a41f30bd")
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'runurl.in')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/links_tutorialbypp/25")
-TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/links_tutorialbypp/27")
-TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/links_tutorialbypp/25")
+SHORTENER_API = environ.get("SHORTENER_API", "1ddfca1b6d97992d09b8d3953bc92adea15ba913")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'inshorturl.com')
+SHORTENER_API2 = environ.get("SHORTENER_API2", "b3237ad42ea69827956a028d6c69c823941c6101")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'linkshortify.com')
+SHORTENER_API3 = environ.get("SHORTENER_API3", "4efa5371846bc9d04b47304acfd8d72636009021")
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'indiaearnx.com')
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/links_tutorialbypp/33")
+TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/links_tutorialbypp/19")
+TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/links_tutorialbypp/41")
 
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam", "bengali", "marathi", "gujarati", "punjabi", "dual", "multi"]
 QUALITIES = ["HdRip","web-dl" ,"bluray", "hdr", "fhd" , "240p", "360p", "480p", "540p", "720p", "960p", "1080p", "1440p", "2K", "2160p", "4k", "5K", "8K"]
@@ -105,6 +105,6 @@ SETTINGS = {
             'third_verify_time': THREE_VERIFY_GAP
     }
 DEFAULT_POST_MODE = {
-    'singel_post_mode' : True,
-    'all_files_post_mode' : False
+    'singel_post_mode' : False,
+    'all_files_post_mode' : True
 }
