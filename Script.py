@@ -250,5 +250,5 @@ Yᴏᴜʀ <ul>ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴ</ul> ᴡɪʟʟ ʙᴇ ᴀᴄᴛɪᴠ
 Title: <code>{title}</code>
 Rating: {rating}
 Genre: {genres}
-File name : {filename}
+File name : {file_name}
 </b>"""
