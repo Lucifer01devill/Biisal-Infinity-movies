@@ -1,6 +1,7 @@
 from utils import temp, get_poster
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from os import environ
 
 POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1001808193316').split(','))))
 
