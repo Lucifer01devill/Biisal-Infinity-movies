@@ -45,8 +45,8 @@ TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "14400"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "28800"))
 
 
-SHORTENER_API = environ.get("SHORTENER_API", "1ddfca1b6d97992d09b8d3953bc92adea15ba913")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'inshorturl.com')
+SHORTENER_API = environ.get("SHORTENER_API", "b3237ad42ea69827956a028d6c69c823941c6101")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'linkshortify.com')
 SHORTENER_API2 = environ.get("SHORTENER_API2", "b3237ad42ea69827956a028d6c69c823941c6101")
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'linkshortify.com')
 SHORTENER_API3 = environ.get("SHORTENER_API3", "4efa5371846bc9d04b47304acfd8d72636009021")
@@ -108,3 +108,4 @@ DEFAULT_POST_MODE = {
     'singel_post_mode' : False,
     'all_files_post_mode' : True
 }
+
