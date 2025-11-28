@@ -10,6 +10,12 @@ from datetime import datetime
 import psutil
 import time
 
+BOT_START_TIME = time.time()
+
+def get_uptime():
+    seconds = time.time() - BOT_START_TIME
+    return time.strftime("%Hh %Mm %Ss", time.gmtime(seconds))
+
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
     check = [u.id for u in message.new_chat_members]
@@ -92,7 +98,8 @@ async def get_ststs(bot, message):
     files = await Media.count_documents()
     db2_size = get_size(await get_files_db_size())
     db2_free = get_size(536870912)
-    uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - time.time()))
+    #uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - time.time()))
+    uptime = get_uptime()
     ram = psutil.virtual_memory().percent
     cpu = psutil.cpu_percent()
     await message.reply_text(script.STATUS_TXT.format(users, groups, size, free, files, db2_size, db2_free, uptime, ram, cpu))
