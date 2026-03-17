@@ -68,7 +68,8 @@ async def tts(client, message):
         print('err in tts',e)
         try:
             os.remove("tts.mp3")
-        except:pass
+        except:
+            pass
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client:Client, message): 
     pm_mode = False
